@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Carbon Footprint Management System</h1>
+        <!-- <img src="header-image.jpg" alt="Carbon Management" class="header-image"> -->
+    </header>
+
+    <main>
+        <section id="data-entry" >
+            <h2>Enter Mining Data</h2>
+            <!-- <img src="mining-image.jpg" alt="Mining Activities" class="section-image"> -->
+            <form id="dataForm">
+                <label for="excavationArea">Total Mining Area (in sq.Km):</label>
+                <input type="number" id="excavationArea" required>
+                
+                <label for="numMines">Number of Mines:</label>
+                <input type="number" id="numMines" required>
+                
+                <label for="coalProduction">Total Coal Production (in Tons):</label>
+                <input type="number" id="coalProduction" required>
+                
+                <label for="transportation">Transportation Details (in Kms):</label>
+                <textarea id="transportation" rows="4" required></textarea>
+                
+                <label for="equipment">Equipment Details:</label>
+                <textarea id="equipment" rows="4" required></textarea>
+                
+                <label for="afforestation">Afforestation Investment (in Rs):</label>
+                <input type="number" id="afforestation" required>
+                
+                <label for="methaneCapture">Methane Capture Actions:</label>
+                <textarea id="methaneCapture" rows="4" required></textarea>
+                
+                <button type="submit">Submit Data</button>
+            </form>
+        </section>
+
+        <section id="visualization" class='hidden'>
+            <h2>Data Visualization</h2>
+            <canvas id="dataChart"></canvas>
+            <!-- <img src="visualization-image.jpg" alt="Data Visualization" class="section-image"> -->
+        </section>
+
+        <section id="recommendations" class='hidden'>
+            <h2>Recommendations for Carbon Neutrality</h2>
+            <!-- <img src="recommendations-image.jpg" alt="Recommendations" class="section-image"> -->
+            <div id="recommendationsList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carbon Footprint Management System</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
